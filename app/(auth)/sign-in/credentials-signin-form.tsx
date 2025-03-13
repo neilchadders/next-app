@@ -5,8 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { signInDefaultValues } from '@/lib/constants';
 import Link from 'next/link';
-import { useActionState } from 'react';
-import { useFormStatus } from 'react-dom';
+import { useActionState } from 'react'; //provides the state of the last action.
+import { useFormStatus } from 'react-dom'; //provides status information of the last form submission.
 import { signInWithCredentials } from '@/lib/actions/user.actions';
 import { useSearchParams } from 'next/navigation';
 
@@ -64,7 +64,7 @@ const CredentialsSignInForm = () => {
         )}
 
         <div className='text-sm text-center text-muted-foreground'>
-          Don&apos;t have an account?{' '}
+          Don&apos;t have an account?{' '} 
           <Link href='/sign-up' target='_self' className='link'>
             Sign Up
           </Link>
